@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="people">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:restriction base="xs:anyType">
+                    <xs:sequence>
+                        <xs:element name="person" type="personType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:restriction>
+            </xs:complexContent>
+        </xs:complexType>
+
+    </xs:element>
+
+    <xs:complexType name="personType">    
+        <xs:complexContent>
+            <xs:restriction base="xs:anyType">
+                <xs:sequence>
+                    <xs:element name="personalInfo" type="personalInfoType"/>
+                    <xs:element name="contactInfo" type="contactType"/>
+                    <xs:element name="address" type="addressType" />
+                    <xs:element name="generalInfo" type="generalInfoType"/>
+                </xs:sequence>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="personalInfoType">
+        <xs:complexContent>
+            <xs:restriction base="xs:anyType">
+                <xs:sequence>
+                    <xs:element name="surname" type="xs:string"/>
+                    <xs:element name="firstNames" type="xs:string"/>
+                    <xs:element name="Initials" type="xs:string"/>
+                    <xs:element name="occupation" type="xs:string"/>
+                    <xs:element name="bussinessName" type="xs:string"/>
+                    <xs:element name="birthdate" type="xs:date"/>
+                    <xs:element name="gender">
+                        <xs:simpleType>
+                            <xs:restriction  base="xs:string">
+                                <xs:enumeration value="male"/>
+                                <xs:enumeration value="female"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="SAID">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="[0-9]{13}"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="perfLang">
+                        <xs:simpleType>
+                            <xs:restriction  base="xs:string">
+                                <xs:enumeration value="English"/>
+                                <xs:enumeration value="Afrikaans"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="populationgGroup">
+                        <xs:simpleType>
+                            <xs:restriction  base="xs:string">
+                                <xs:enumeration value="White"/>
+                                <xs:enumeration value="Black"/>
+                                <xs:enumeration value="Coloured"/>
+                                <xs:enumeration value="Asian"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>            
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="contactType">
+        <xs:complexContent>
+            <xs:restriction base="xs:anyType">  
+                <xs:sequence>
+                    <xs:element name="cellphone">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="[0-9]{7,15}"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="email">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="[^@]+@[^\.]+\..+"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>               
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="addressType">
+        <xs:complexContent>
+            <xs:restriction base="xs:anyType"> 
+                <xs:sequence>
+                    <xs:element name="streetNumber">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="[0-9]+"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="StreetName" type="xs:string"/>
+                    <xs:element name="buildingName" type="xs:string"/>
+                    <xs:element name="suburb" type="xs:string"/>
+                    <xs:element name="cityTown" type="xs:string"/>
+                    <xs:element name="postalCode">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="[0-9]+"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>                
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="generalInfoType">
+        <xs:complexContent>
+            <xs:restriction base="xs:anyType"> 
+                <xs:sequence>
+                    <xs:element name="mailList">
+                        <xs:simpleType>
+                            <xs:restriction  base="xs:string">
+                                <xs:enumeration value="Yes"/>
+                                <xs:enumeration value="No"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="smsList">
+                        <xs:simpleType>
+                            <xs:restriction  base="xs:string">
+                                <xs:enumeration value="Yes"/>
+                                <xs:enumeration value="No"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="interests"> <!--Have to make categories-->
+                        <xs:simpleType>
+                            <xs:list itemType="interestTypes"/>                         
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="hearAboutUs" type="xs:string"/>
+                </xs:sequence>               
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="interestTypes">
+        <xs:restriction  base="xs:string">
+            <xs:enumeration value="News"/>
+            <xs:enumeration value="Events"/>
+            <xs:enumeration value="Needs"/>
+            <xs:enumeration value="None"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<people
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='Person.xsd'>
+    <person>
+        <personalInfo>
+            <surname>Evert</surname>
+            <firstNames>Tyron</firstNames>
+            <Initials>TW</Initials>
+            <occupation>Student</occupation>
+            <bussinessName>Tuks</bussinessName>
+            <birthdate>1994-04-18</birthdate>
+            <gender>male</gender>
+            <SAID>9404185120081</SAID>
+            <perfLang>English</perfLang>
+            <populationgGroup>White</populationgGroup>
+        </personalInfo>
+        <contactInfo>
+            <cellphone>0823386360</cellphone>
+            <email>u13290178@tuks.com</email>
+        </contactInfo>
+        <address>
+            <streetNumber>411</streetNumber>
+            <StreetName>Pretoria Road</StreetName>
+            <buildingName>Home</buildingName>
+            <suburb>Silverton</suburb>
+            <cityTown>Pretoria</cityTown>
+            <postalCode>0127</postalCode>
+        </address>
+        <generalInfo>
+            <mailList>Yes</mailList>
+            <smsList>Yes</smsList>
+            <interests>
+                None
+            </interests>
+            <hearAboutUs>Family</hearAboutUs>
+        </generalInfo>
+    </person>
+</people>
