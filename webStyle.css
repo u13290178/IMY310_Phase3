@@ -309,4 +309,23 @@ footer
 	width: 100%;
 }
 
+#title
+{
+	font-size: 2em;
+	padding-left: 5%;
+}
+
+#title2
+{
+	padding-left: 5%;
+}
+
+table#title2 td a
+{
+	text-align: center;
+	vertical-align:center;
+	padding-left: 23%;
+	align:enter;
+}
+
 
