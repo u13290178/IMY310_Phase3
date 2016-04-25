@@ -1,13 +1,50 @@
-<nav class="navbar"> 
-      	<ul id="Nav">
+<nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+			<img src="Images/logoImage.png" height="50px"/>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+				  <li><a href="About Us.html">The Homes</a></a></li>
+                <li><a href="#">Certificates</a></a></li>
+                <li><a href="#">Sponsors</a></li>
+              </ul>
+            </li>
+			<li><a href="Contact us.html">Contact Us</a></li>
+            <li><a href="News.html">News</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+      <br/>
+</nav>
+
+
+
+
+
+<!--
+	<nav class="navbar"> 
+      	<ul class="nav" id="Nav">
       		<li>
-      			<a href="index.html" title="Link" class="focus">Home</a>
+      			<a href="index.html" title="Link" onclick="change()" >Home</a>
             </li> 
             <li>
-                <a href="About Us.html" title="Link">About Us ></a>
+                <a href="About Us.html" title="Link" onclick="console.log('Test')" class="focus">About Us &gt;</a>
                 <ul>
                 	<li>
-                    	<a href="Certificates.html" title="Link">Cerificates</a>
+                    	<a href="Certificates.html" title="Link" onclick="change()">Cerificates</a>
                     </li>
                     <li>
                     	<a href="#" title="Link">Sponsors</a>
@@ -18,7 +55,7 @@
                 <a href="News.html" title="Link">News</a> 
             </li> 
             <li>
-                <a href="Projects.html" title="Link">Projects ></a> 
+                <a href="Projects.html" title="Link">Projects &gt;</a> 
                 <ul>
                 	<li>
                     	<a href="#" title="Link">Adopt a Home</a>
@@ -29,7 +66,7 @@
                 </ul>
             </li> 
             <li>
-                <a href="Get Involved.html" title="Link">Get Involved ></a>
+                <a href="Get Involved.html" title="Link">Get Involved &gt;</a>
                 
             </li> 
             <li>
@@ -46,5 +83,5 @@
                     </li>
                 </ul>
             </li> 
-      </nav>
-      <hr>
+      </nav>-->
+   
