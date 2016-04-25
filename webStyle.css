@@ -23,7 +23,11 @@ color: rgb(146, 146, 146);
 	background-color:#FFFACD;
 }
 #nav{
-	background-color:#EEEB8D; 
+	/*background-color:#EEEB8D;*/
+background: -moz-linear-gradient(left, rgba(238,235,141,0.15) 5%, rgba(238,235,141,0.5) 20%, rgba(238,235,141,0.5) 34%, rgba(238,235,141,0.5) 68%, rgba(238,235,141,0.5) 80%, rgba(238,235,141,0.15) 95%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(238,235,141,0.15) 5%,rgba(238,235,141,0.5) 20%,rgba(238,235,141,0.5) 34%,rgba(238,235,141,0.5) 68%,rgba(238,235,141,0.5) 80%,rgba(238,235,141,0.15) 95%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(238,235,141,0.15) 5%,rgba(238,235,141,0.5) 20%,rgba(238,235,141,0.5) 34%,rgba(238,235,141,0.5) 68%,rgba(238,235,141,0.5) 80%,rgba(238,235,141,0.15) 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26eeeb8d', endColorstr='#26eeeb8d',GradientType=1 ); /* IE6-9 */
 }
 #mainwrapper header 
 {
